@@ -5,45 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
-      integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/lit.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:300,400,700"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="css/site.css" />
   </head>
   <body>
-    <div class="ribbon">
-      <div class="content">
-        <h1 class="header">Green Libraries</h1>
-
-        <p class="subtitle">
-          This page shows UK public library services who have signed up to the
-          Green Libraries Manifesto. This is published by by CILIP in
-          partnership with Arts Council England, British Library, Libraries
-          Connected and Julie’s Bicycle.
-        </p>
-        <p>
-          <a
-            class="pure-button button-green button-xlarge"
-            href="https://www.cilip.org.uk/page/GreenLibrariesManifesto"
-            target="_blank"
-            >Sign the manifesto</a
-          >
-        </p>
+    <div class="c">
+      <div class="header">
+        <img src="img/leaf.svg" alt="Green libraries" class="logo" />
+        <h1 class="success">green libraries</h1>
       </div>
-    </div>
 
-    <div class="content">
+      <p class="subtitle">
+        Showing public library services who have signed the Green Libraries
+        Manifesto. This is published by by CILIP in partnership with Arts
+        Council England, British Library, Libraries Connected and Julie’s
+        Bicycle.
+      </p>
+      <br />
+      <p>
+        <a
+          class="btn success"
+          href="https://www.cilip.org.uk/page/GreenLibrariesManifesto"
+          target="_blank"
+          >Sign the manifesto</a
+        >
+      </p>
+
       <p class="subtitle" id="p-data-loading">
         Please wait while data loads...
       </p>
       <div id="div-library-hexmap"></div>
+
+      <hr />
+      <div id="wcb" class="carbonbadge wcb-d"></div>
+      <script
+        src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
+        defer
+      ></script>
     </div>
 
     <script src="https://unpkg.com/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
+    <script src="js/oi.hexmap.min.js"></script>
     <script src="js/helpers.js"></script>
-    <script src="js/oi.hexmap.js"></script>
     <script src="js/map.js"></script>
   </body>
 </html>

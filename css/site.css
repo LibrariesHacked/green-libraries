@@ -1,39 +1,13 @@
-.content {
-  margin: 0 auto;
-  max-width: 980px;
-  padding: 10px;
-}
-
-.ribbon {
-  background: #f1f8e9;
-  text-align: center;
-}
-
-.header {
-  font-size: 3em;
-  font-weight: 300;
-  color: #004d38;
-}
-
-.subtitle {
-  font-size: 1.3em;
-  font-weight: 300;
+.header img {
+  float: left;
+  width: 55px;
+  height: 55px;
+  padding-right: 10px;
 }
 
 #div-library-hexmap {
   height: 800px;
   width: 100%;
-}
-
-.button-green {
-  color: white;
-  border-radius: 4px;
-  text-shadow: none;
-  background-color: #004d38;
-}
-
-.button-xlarge {
-  font-size: 125%;
 }
 
 .hex-cell {

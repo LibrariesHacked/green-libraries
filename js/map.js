@@ -28,7 +28,9 @@ const buildHexMap = () => {
         var greenLibrary = attr.hex.greenLibrary
         var service = attr.hex.n
 
-        var data_attrs = `data-service="${service}" data-green="${greenLibrary === true}"`
+        var data_attrs = `data-service="${service}" data-green="${
+          greenLibrary === true
+        }"`
 
         var greenHex = `<tspan ${data_attrs} class="hexdata green">&check;</tspan>`
         var nonGreenHex = `<tspan ${data_attrs} class="hexdata">&nbsp;</tspan>`
