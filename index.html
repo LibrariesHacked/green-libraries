@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Green libraries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+      integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <div class="ribbon">
+      <div class="content">
+        <h1 class="header">Green Libraries</h1>
+
+        <p class="subtitle">
+          This page shows UK public library services who have signed up to the
+          Green Libraries Manifesto. This is published by by CILIP in
+          partnership with Arts Council England, British Library, Libraries
+          Connected and Julie’s Bicycle.
+        </p>
+        <p>
+          <a
+            class="pure-button button-green button-xlarge"
+            href="https://www.cilip.org.uk/page/GreenLibrariesManifesto"
+            target="_blank"
+            >Sign the manifesto</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="content">
+      <p class="subtitle" id="p-data-loading">
+        Please wait while data loads...
+      </p>
+      <div id="div-library-hexmap"></div>
+    </div>
+
+    <script src="https://unpkg.com/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/oi.hexmap.js"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>
