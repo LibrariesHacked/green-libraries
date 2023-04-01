@@ -1,7 +1,7 @@
-.header img {
+.logo {
   float: left;
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   padding-right: 10px;
 }
 
@@ -10,11 +10,21 @@
   width: 100%;
 }
 
+#btn-sign {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .hex-cell {
-  stroke: #e0e0e0;
+  stroke: #ffe5b2;
   stroke-width: 1px;
 }
 
 .hex-label {
   fill: #004d38 !important;
+}
+
+.popup {
+  font-family: nunito;
 }

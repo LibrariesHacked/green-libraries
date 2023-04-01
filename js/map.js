@@ -16,7 +16,7 @@ const buildHexMap = () => {
       var greenLibrary = service['Green library']
 
       hexdata.hexes[hexCode].greenLibrary = greenLibrary === true
-      hexdata.hexes[hexCode].colour = greenLibrary ? '#f1f8e9' : '#fafafa'
+      hexdata.hexes[hexCode].colour = greenLibrary ? '#f1f8e9' : '#fffdf9'
     }
   })
 
@@ -49,8 +49,8 @@ const buildHexMap = () => {
         var greenLibrary = span.dataset.green === 'true'
         var service = span.dataset.service
 
-        var greenPopup = `<div><span class="span-service">${service}</span><br/>Signed up &check;</div>`
-        var nonGreenPopup = `<div><span class="span-service">${service}</span><br/>Not yet signed up</div>`
+        var greenPopup = `<div class="popup"><span>${service}</span><br/>Signed up &check;</div>`
+        var nonGreenPopup = `<div class="popup"><span>${service}</span><br/>Not yet signed up</div>`
         return greenLibrary ? greenPopup : nonGreenPopup
       }
       return null

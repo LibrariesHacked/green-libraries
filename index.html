@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Green libraries</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="UK public library services who have signed the Green Libraries Manifesto." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -10,28 +12,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Nunito:300,400,700"
+      href="https://fonts.googleapis.com/css?family=Nunito:400"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/site.css" />
   </head>
   <body>
     <div class="c">
-      <div class="header">
+      <div>
         <img src="img/leaf.svg" alt="Green libraries" class="logo" />
         <h1 class="success">green libraries</h1>
       </div>
 
       <p class="subtitle">
-        Showing public library services who have signed the Green Libraries
-        Manifesto. This is published by by CILIP in partnership with Arts
+        UK public library services who have signed the Green Libraries
+        Manifesto. Green Libraries is a collaboration between CILIP, Arts
         Council England, British Library, Libraries Connected and Julie’s
         Bicycle.
       </p>
-      <br />
+
       <p>
         <a
-          class="btn success"
+          id="btn-sign"
+          class="btn primary"
           href="https://www.cilip.org.uk/page/GreenLibrariesManifesto"
           target="_blank"
           >Sign the manifesto</a
@@ -41,10 +44,11 @@
       <p class="subtitle" id="p-data-loading">
         Please wait while data loads...
       </p>
+
       <div id="div-library-hexmap"></div>
 
       <hr />
-      <div id="wcb" class="carbonbadge wcb-d"></div>
+      <div id="wcb" class="carbonbadge"></div>
       <script
         src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
         defer
