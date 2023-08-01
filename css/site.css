@@ -17,14 +17,18 @@
 }
 
 .hex-cell {
-  stroke: #e0e0e0;
+  stroke: #f5f5f5;
   stroke-width: 1px;
 }
 
 .hex-label {
-  fill: #ffffff !important;
+  fill: #113026 !important;
 }
 
 .popup {
   font-family: nunito;
+}
+
+.btn {
+  text-transform: none;
 }
