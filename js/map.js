@@ -15,7 +15,7 @@ const buildHexMap = () => {
     if (service) {
       var greenLibrary = service['Green library']
       hexdata.hexes[hexCode].greenLibrary = greenLibrary === true
-      hexdata.hexes[hexCode].colour = greenLibrary ? '#9cc439' : '#fafafa'
+      hexdata.hexes[hexCode].colour = greenLibrary ? '#e3f3e2' : '#f5f5f5'
     }
   })
 
