@@ -11,12 +11,12 @@
 }
 
 .hex-cell {
-  stroke: #eeeeee;
+  stroke: #e0e0e0;
   stroke-width: 1px;
 }
 
 .hex-label {
-  fill: #9cc439 !important;
+  fill: #2d7700 !important;
 }
 
 .popup {
