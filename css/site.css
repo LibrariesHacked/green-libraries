@@ -22,4 +22,10 @@
 
 .hex-label {
   fill: #2d7700 !important;
+  font-weight: bolder;
+}
+
+.popup-title {
+  font-weight: bolder;
+  font-size: 1.2em;
 }
