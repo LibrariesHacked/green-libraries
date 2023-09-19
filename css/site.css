@@ -10,9 +10,9 @@
 
 #btn-sign {
   display: inline-block;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
   text-transform: none;
+  font-weight: bolder;
 }
 
 .hex-cell {
