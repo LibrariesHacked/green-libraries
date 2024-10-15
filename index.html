@@ -18,13 +18,13 @@
   <body>
     <div class="c">
       <div>
-        <h1 class="success">green libraries</h1>
+        <h1 class="success">Green Libraries</h1>
       </div>
 
       <p class="subtitle">
-        These are the public library services who have signed the Green
-        Libraries Manifesto. Green Libraries is a collaboration between CILIP,
-        Arts Council England, British Library, Libraries Connected and Julie’s
+        These are public library services who have signed the Green Libraries
+        Manifesto. Green Libraries is a collaboration between CILIP, Arts
+        Council England, British Library, Libraries Connected, and Julie’s
         Bicycle.
       </p>
 
@@ -34,13 +34,12 @@
           class="btn primary"
           href="https://www.cilip.org.uk/page/GreenLibrariesManifesto"
           target="_blank"
+          rel="noopener"
           >Sign the manifesto</a
         >
       </p>
 
-      <p class="subtitle" id="p-data-loading">
-        Please wait while data loads...
-      </p>
+      <p class="subtitle" id="p-data-loading">Data loading...</p>
 
       <div id="div-library-hexmap"></div>
 
@@ -56,6 +55,6 @@
     <script src="https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
     <script src="js/oi.hexmap.min.js"></script>
     <script src="js/helpers.js"></script>
-    <script src="js/map.js"></script>
+    <script src="js/map.js" defer></script>
   </body>
 </html>

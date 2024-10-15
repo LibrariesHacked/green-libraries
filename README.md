@@ -1,10 +1,10 @@
 # Green libraries
 
-A single page website for public library services who have signed the Green Library Manifesto
+A single page website to display public library services who have signed the Green Library Manifesto
 
 ## Deployment
 
-The project is deployed using GitHub pages. Github should automatically build and then deploy the site on any changes made to the main branch.
+The project is deployed using GitHub pages. When any changes are made to the `main` branch Github should automatically build and then deploy the site.
 
 ## Built With
 

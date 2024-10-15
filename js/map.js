@@ -1,38 +1,38 @@
-const fetchHexJson = fetch(greenLibraries.hexJson).then(res => res.json())
-const fetchServicesData = fetch(greenLibraries.services).then(res => res.json())
-const allData = Promise.all([fetchHexJson, fetchServicesData])
-const hexMapElement = document.getElementById('div-library-hexmap')
+const fetchHex = fetch(greenLibraries.hexJson).then(res => res.json())
+const fetchServices = fetch(greenLibraries.services).then(res => res.json())
+const allData = Promise.all([fetchHex, fetchServices])
+const hexMapEl = document.getElementById('div-library-hexmap')
 
 let storedData = null
 
 const buildHexMap = () => {
-  hexMapElement.innerHTML = ''
-  var hexdata = storedData[0]
-  var serviceData = storedData[1]
+  hexMapEl.innerHTML = ''
+  const hexdata = storedData[0]
+  const serviceData = storedData[1]
 
-  Object.keys(hexdata.hexes).forEach(hexCode => {
-    var service = serviceData.find(x => x.Code === hexCode)
+  Object.keys(hexdata.hexes).forEach(code => {
+    const service = serviceData.find(x => x.Code === code)
     if (service) {
-      var greenLibrary = service['Green library']
-      hexdata.hexes[hexCode].greenLibrary = greenLibrary === true
-      hexdata.hexes[hexCode].colour = greenLibrary ? '#e3f3e2' : '#f2f2f2'
+      const greenLibrary = service['Green library']
+      hexdata.hexes[code].greenLibrary = greenLibrary === true
+      hexdata.hexes[code].colour = greenLibrary ? '#e3f3e2' : '#f2f2f2'
     }
   })
 
-  new OI.hexmap(hexMapElement, {
+  new OI.hexmap(hexMapEl, {
     label: {
       show: true,
       clip: true,
       format: function (txt, attr) {
-        var greenLibrary = attr.hex.greenLibrary
-        var service = attr.hex.n
+        const greenLibrary = attr.hex.greenLibrary
+        const service = attr.hex.n
 
         var data_attrs = `data-service="${service}" data-green="${
           greenLibrary === true
         }"`
 
-        var greenHex = `<tspan ${data_attrs} class="hexdata green">&check;</tspan>`
-        var nonGreenHex = `<tspan ${data_attrs} class="hexdata">&nbsp;</tspan>`
+        const greenHex = `<tspan ${data_attrs} class="hexdata green">&check;</tspan>`
+        const nonGreenHex = `<tspan ${data_attrs} class="hexdata">&nbsp;</tspan>`
 
         return greenLibrary ? greenHex : nonGreenHex
       }
@@ -43,13 +43,13 @@ const buildHexMap = () => {
   tippy('#div-library-hexmap .hexmap-inner svg g', {
     trigger: 'click',
     content: reference => {
-      var span = reference.querySelector('.hexdata')
+      const span = reference.querySelector('.hexdata')
       if (span && span.dataset.green) {
-        var greenLibrary = span.dataset.green === 'true'
-        var service = span.dataset.service
+        const greenLibrary = span.dataset.green === 'true'
+        const service = span.dataset.service
 
-        var greenPopup = `<div class="popup"><span class="popup-title">${service}</span><br/>Signed up</div>`
-        var nonGreenPopup = `<div class="popup"><span class="popup-title">${service}</span><br/>Not yet signed up</div>`
+        const greenPopup = `<div class="popup"><span class="popup-title">${service}</span><br/>Signed</div>`
+        const nonGreenPopup = `<div class="popup"><span class="popup-title">${service}</span><br/>Not yet signed</div>`
         return greenLibrary ? greenPopup : nonGreenPopup
       }
       return null
@@ -60,7 +60,7 @@ const buildHexMap = () => {
   document.getElementById('p-data-loading').style.display = 'none'
 }
 
-allData.then(res => {
-  storedData = res
+allData.then(r => {
+  storedData = r
   buildHexMap()
 })
